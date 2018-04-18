@@ -38,7 +38,7 @@ import winsound
 print("Is this being run on replit?")
 replit = input("Is this running on Repl.it? (Acceptable answers are yes or no) ")
 if replit == "yes":
-	print("DISCLAIMER: Running this on repl.it will cause somethings (screen clearing and background music) to not happen. If you would like to run this on your desktop go here <INSERT LINK HERE>")
+	print("DISCLAIMER: Running this on repl.it will cause somethings (screen clearing and background music) to not happen. If you would like to run this on your desktop go here https://bit.ly/2HCskUu")
 if replit == "yes":
     time.sleep(5)
 if sys.platform == "linux" or sys.platform == "posix":
