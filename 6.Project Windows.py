@@ -109,10 +109,10 @@ def intro():
         program()
 def restartmaybe():
     manyspace()
-    print("Do you want to do another triangle? Go to the home screen? Or exit.")
+    print("Do you want to do another equation? Go to the home screen? Or exit.")
     print("")
-    restart = input("What do you want to do (acceptable inputs are another triangle, homescreen, and exit) ")
-    if restart == "another triangle" or restart == "Another triangle" or restart == "Another Restart" or restart == "another Triangle" or restart == "Another" or restart == "another" or restart == "triangle" or restart == "Triangle":
+    restart = input("What do you want to do (acceptable inputs are another equation, homescreen, and exit) ")
+    if restart == "another equation" or restart == "Another Equation" or restart == "Another Restart" or restart == "another Equation" or restart == "Another" or restart == "another" or restart == "equation" or restart == "Equation":
         manyspace()
         program()
     elif restart == "Home screen" or restart == "home Screen" or restart == "Home Screen" or restart == "home screen" or restart == "home" or restart == "Home" or restart == "homescreen":
