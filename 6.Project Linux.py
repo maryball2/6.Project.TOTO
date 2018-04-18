@@ -183,6 +183,8 @@ def program():
         c = str(c)
         firstanswer = str("{0:.6f}".format(firstanswer))
         secondanswer = str("{0:.6f}".format(secondanswer))
+        firstanswer = firstanswer.replace("j","i")
+        secondanswer = secondanswer.replace("j","i")
         print("The roots of",a +"x² +",b +"x +",c,"are",firstanswer,"and",secondanswer)
     elif discriminate == 0:
         print("There is only one repeated root")
