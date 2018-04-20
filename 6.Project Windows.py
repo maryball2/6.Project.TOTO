@@ -96,11 +96,19 @@ def intro():
     title()
     playedbefore = "no"
     playsound("Main-Menu.wav")
-    print("Do you want to get the roots of the quadratic equation, exit, or credits")
-    introchoice = input("What do you want to do? (Acceptable commands are roots, exit, or credits) ")
-    if introchoice == "credits" or introchoice == "Credits":
+    print(""" 
+    
+    What would you like to do?
+    
+    1. Roots
+    2. Credits
+    3. Exit
+    
+    """)
+    introchoice = input("What do you want to do? ")
+    if introchoice == "credits" or introchoice == "Credits" or introchoice == '2':
         credits()
-    elif introchoice == "exit" or introchoice == "Exit":
+    elif introchoice == "exit" or introchoice == "Exit" or introchoice == '3':
         exit()
     else:
         if playedbefore == "no":
