@@ -117,13 +117,21 @@ def intro():
         program()
 def restartmaybe():
     manyspace()
-    print("Do you want to do another equation? Go to the home screen? Or exit.")
+    print("""
+    
+    What would you like to do?
+    
+    1. Another equation
+    2. Go to the home screen 
+    3. Exit.
+    
+    """)
     print("")
-    restart = input("What do you want to do (acceptable inputs are another equation, homescreen, and exit) ")
-    if restart == "another equation" or restart == "Another Equation" or restart == "Another Restart" or restart == "another Equation" or restart == "Another" or restart == "another" or restart == "equation" or restart == "Equation":
+    restart = input("What do you want to do? ")
+    if restart == "another equation" or restart == "Another Equation" or restart == "Another Restart" or restart == "another Equation" or restart == "Another" or restart == "another" or restart == "equation" or restart == "Equation" or restart == '1':
         manyspace()
         program()
-    elif restart == "Home screen" or restart == "home Screen" or restart == "Home Screen" or restart == "home screen" or restart == "home" or restart == "Home" or restart == "homescreen":
+    elif restart == "Home screen" or restart == "home Screen" or restart == "Home Screen" or restart == "home screen" or restart == "home" or restart == "Home" or restart == "homescreen" or restart == '2':
         manyspace()
         intro()
     else:
