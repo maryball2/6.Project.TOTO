@@ -98,11 +98,11 @@ def intro():
     playsound("Main-Menu.wav")
     print(""" 
     
-    What would you like to do?
+         		What would you like to do?
     
-    1. Roots
-    2. Credits
-    3. Exit
+         		1. Roots
+         		2. Credits
+         		3. Exit
     
     """)
     introchoice = input("What do you want to do? ")
@@ -119,11 +119,11 @@ def restartmaybe():
     manyspace()
     print("""
     
-    What would you like to do?
+         		What would you like to do?
     
-    1. Another equation
-    2. Go to the home screen 
-    3. Exit.
+         		1. Another equation
+         		2. Go to the home screen 
+         		3. Exit.
     
     """)
     print("")
