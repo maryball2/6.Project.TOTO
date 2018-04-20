@@ -38,7 +38,7 @@ import winsound
 print("Is this being run on replit?")
 replit = input("Is this running on Repl.it? (Acceptable answers are yes or no) ")
 if replit == "yes":
-	print("DISCLAIMER: Running this on repl.it will cause somethings (screen clearing and background music) to not happen. If you would like to run this on your desktop go here https://bit.ly/2HCskUu")
+	print("DISCLAIMER: Running this on repl.it will cause some things (screen clearing and background music) to not happen. If you would like to run this on your desktop go here https://bit.ly/2HCskUu")
 if replit == "yes":
     time.sleep(5)
 if sys.platform == "linux" or sys.platform == "posix":
@@ -52,14 +52,14 @@ def playsound(musicfile):
         winsound.PlaySound(musicfile, winsound.SND_ASYNC)
 def title():
     print("""
-         		====================================================
+         		/==================================================\
          		|    ____                  __           __  _      |
          		|   / __ \__  ______ _____/ /________ _/ /_(_)____ |
         		|  / / / / / / / __ `/ __  / ___/ __ `/ __/ / ___/ |
         		| / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / /__   |
          		| \___\_\__,_/\__,_/\__,_/_/   \__,_/\__/_/\___/   |
          		|                                                  |
-         		====================================================
+         		\==================================================/
          """)
 def manyspace():
     if replit == "no":
@@ -150,11 +150,11 @@ def credits():
     print("Riley Carpenter")
     time.sleep(3)
     manyspace()
-    print("Programmer and head of research development")
+    print("Programmer, GUI dev, and head of research development")
     print("Bosah Mbajekwe")
     time.sleep(3)
     manyspace()
-    print("Second in Command/Playtester/Graphic Designer")
+    print("Second in Command, Playtester, and Graphic Designer")
     print("Liam Kiely")
     print("")
     print("")
@@ -173,10 +173,11 @@ def exit():
     time.sleep(4)
     os._exit(0)
 def program():
+    manyspace()
     a = float(input("Enter any number that is not 0 for a. "))
     while a == 0:
         print("It has to be a number that isn't 0!")
-        a = float(input("PLEASE Enter any number that is not 0 for a. "))
+        a = float(input("PLEASE enter any number that is not 0 for a. "))
     b = float(input("Enter a real number for B "))
     c = float(input("Enter a real number for C "))
     discriminate = (b ** 2) - (4 * a * c)
