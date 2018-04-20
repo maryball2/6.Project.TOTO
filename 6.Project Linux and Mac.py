@@ -38,7 +38,7 @@ from pygame import mixer
 print("Is this being run on replit?")
 replit = input("Is this running on Repl.it? (Acceptable answers are yes or no) ")
 if replit == "yes":
-	print("DISCLAIMER: Running this on repl.it will cause somethings (screen clearing and background music) to not happen. If you would like to run this on your desktop go here https://bit.ly/2HCskUu")
+	print("DISCLAIMER: Running this on repl.it will cause some things (screen clearing and background music) to not happen. If you would like to run this on your desktop go here https://bit.ly/2HCskUu")
 if replit == "yes":
     time.sleep(5)
 if sys.platform == "linux" or sys.platform == "posix":
@@ -54,59 +54,40 @@ def playsound(musicfile):
     	    mixer.init()
     	    mixer.music.load(musicfile)
     	    mixer.music.play()
-        else:
-            winsound.PlaySound(musicfile, winsound.SND_ASYNC)
 def title():
     print("""
-         ====================================================
-         |    ____                  __           __  _      |
-         |   / __ \__  ______ _____/ /________ _/ /_(_)____ |
-         |  / / / / / / / __ `/ __  / ___/ __ `/ __/ / ___/ |
-         | / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / /__   |
-         | \___\_\__,_/\__,_/\__,_/_/   \__,_/\__/_/\___/   |
-         |                                                  |
-         ====================================================
+         		/==================================================\
+         		|    ____                  __           __  _      |
+         		|   / __ \__  ______ _____/ /________ _/ /_(_)____ |
+        		|  / / / / / / / __ `/ __  / ___/ __ `/ __/ / ___/ |
+        		| / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / /__   |
+         		| \___\_\__,_/\__,_/\__,_/_/   \__,_/\__/_/\___/   |
+         		|                                                  |
+         		\==================================================/
          """)
 def manyspace():
     if replit == "no":
         os.system(clearorcls)
     else:
         print("""
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         """)
 def intro():
     title()
     playedbefore = "no"
     playsound("Main-Menu.wav")
-    print("Do you want to get the roots of the quadratic equation, exit, or credits")
-    introchoice = input("What do you want to do? (Acceptable commands are roots, exit, or credits) ")
-    if introchoice == "credits" or introchoice == "Credits":
+    print(""" 
+    
+         		What would you like to do?
+    
+         		1. Roots
+         		2. Credits
+         		3. Exit
+    
+    """)
+    introchoice = input("What do you want to do? ")
+    if introchoice == "credits" or introchoice == "Credits" or introchoice == '2':
         credits()
-    elif introchoice == "exit" or introchoice == "Exit":
+    elif introchoice == "exit" or introchoice == "Exit" or introchoice == '3':
         exit()
     else:
         if playedbefore == "no":
@@ -115,13 +96,21 @@ def intro():
         program()
 def restartmaybe():
     manyspace()
-    print("Do you want to do another equation? Go to the home screen? Or exit.")
+    print("""
+    
+         		What would you like to do?
+    
+         		1. Another equation
+         		2. Go to the home screen 
+         		3. Exit.
+    
+    """)
     print("")
-    restart = input("What do you want to do (acceptable inputs are another equation, homescreen, and exit) ")
-    if restart == "another equation" or restart == "Another Equation" or restart == "Another Restart" or restart == "another Equation" or restart == "Another" or restart == "another" or restart == "equation" or restart == "Equation":
+    restart = input("What do you want to do? ")
+    if restart == "another equation" or restart == "Another Equation" or restart == "Another Restart" or restart == "another Equation" or restart == "Another" or restart == "another" or restart == "equation" or restart == "Equation" or restart == '1':
         manyspace()
         program()
-    elif restart == "Home screen" or restart == "home Screen" or restart == "Home Screen" or restart == "home screen" or restart == "home" or restart == "Home" or restart == "homescreen":
+    elif restart == "Home screen" or restart == "home Screen" or restart == "Home Screen" or restart == "home screen" or restart == "home" or restart == "Home" or restart == "homescreen" or restart == '2':
         manyspace()
         intro()
     else:
@@ -140,11 +129,11 @@ def credits():
     print("Riley Carpenter")
     time.sleep(3)
     manyspace()
-    print("Programmer and head of research development")
+    print("Programmer, GUI dev, and head of research development")
     print("Bosah Mbajekwe")
     time.sleep(3)
     manyspace()
-    print("Second in Command/Playtester/Graphic Designer")
+    print("Second in Command, Playtester, and Graphic Designer")
     print("Liam Kiely")
     print("")
     print("")
@@ -163,10 +152,11 @@ def exit():
     time.sleep(4)
     os._exit(0)
 def program():
+    manyspace()
     a = float(input("Enter any number that is not 0 for a. "))
     while a == 0:
         print("It has to be a number that isn't 0!")
-        a = float(input("PLEASE Enter any number that is not 0 for a. "))
+        a = float(input("PLEASE enter any number that is not 0 for a. "))
     b = float(input("Enter a real number for B "))
     c = float(input("Enter a real number for C "))
     discriminate = (b ** 2) - (4 * a * c)
@@ -207,3 +197,4 @@ if replit == "no":
     playsound("soundthatneedstoplayatthebeginningforaveryspecificreasonthatidontknow-49490711.wav")
 manyspace()
 intro()
+#
