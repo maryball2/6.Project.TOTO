@@ -53,7 +53,7 @@ def playsound(musicfile):
         if sys.platform == "linux" or sys.platform == "posix":
     	    mixer.init()
     	    mixer.music.load(musicfile)
-    	    mixer.music.play()
+    	    mixer.music.play(-1)
 def title():
     print("""
          		/==================================================\
