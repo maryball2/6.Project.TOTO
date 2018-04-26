@@ -53,7 +53,7 @@ def playsound(musicfile):
         if sys.platform == "linux" or sys.platform == "posix":
     	    mixer.init()
     	    mixer.music.load(musicfile)
-    	    mixer.music.play(-1)
+    	    mixer.music.play()
 def title():
     print("""
          		/==================================================\
@@ -81,19 +81,29 @@ def intro():
     
          		1. Roots
          		2. Credits
-         		3. Exit
+         		3. About
+         		4. Exit
     
     """)
     introchoice = input("What do you want to do? ")
     if introchoice == "credits" or introchoice == "Credits" or introchoice == '2':
         credits()
-    elif introchoice == "exit" or introchoice == "Exit" or introchoice == '3':
+    elif introchoice == "exit" or introchoice == "Exit" or introchoice == '4':
         exit()
+    elif introchoice == "about" or introchoice == "About" or introchoice == "3":
+    	about()
     else:
         if playedbefore == "no":
             playsound("Song003.wav")
             playedbefore = "yes"
         program()
+def about():
+	playsound("Aboutmusic.wav")
+	manyspace()
+	print("This program will find the real roots of a quadratic equation of the form ax^2 + bx + c = 0, where a, b, and c are real numbers, and a is nonzero. Viva la TOTO")
+	wait = input("Press any button")
+	intro()
+	manyspace()
 def restartmaybe():
     manyspace()
     print("""
